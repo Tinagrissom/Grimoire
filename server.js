@@ -13,3 +13,7 @@ const MONGODB_URI = process.env.MONGODB_URI;
 app.use(express.static("public"));
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
+
+app.listen(PORT, () => {
+  console.log('listening', PORT);
+})
