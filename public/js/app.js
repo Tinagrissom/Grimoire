@@ -59,7 +59,7 @@ class App extends React.Component {
   render = () => {
     return (
       <div>
-        <h3>A collection of dreams, crystals, and, incantations to inspire.<h3>
+        <h3>A collection of dreams, crystals, and, incantations to inspire.</h3>
       </div>
     )
   }
