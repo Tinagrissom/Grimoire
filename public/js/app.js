@@ -30,7 +30,7 @@ class App extends React.Component {
     })
   }
 
-  updatedEntry = (event) => {
+  updateEntry = (event) => {
     event.preventDefault()
     const id = event.target.id
     axios.put('/entries/' + id, this.state).then((response) => {
@@ -49,7 +49,7 @@ class App extends React.Component {
       this.setState({
         entries: response.data,
         type: '',
-        dat: '',
+        date: '',
         image: '',
         description: '',
       })
@@ -60,6 +60,57 @@ class App extends React.Component {
     return (
       <div>
         <h3>A collection of dreams, crystals, and, incantations to inspire.</h3>
+        <h4>Add new Entry</h4>
+          <form onSubmit ={this.handleSubmit}>
+              <label htmlFor="type">Type of Entry</label>
+              <input type="text" id="type" onChange={this.handleChanges}/>
+              <br />
+              <label htmlFor="date">Date</label>
+              <input type="text" id="date" onChange={this.handleChanges}/>
+              <br />
+              <label htmlFor="image">Image</label>
+              <input type="text" id="image" onChange={this.handleChanges}/>
+              <br />
+              <label htmlFor="description">Description</label>
+              <input type="text" id="description" onChange={this.handleChanges}/>
+              <br />
+              <input type="submit" value="Add to Entries"/>
+          </form>
+        <h3>Recent Entries</h3>
+          <ul>
+            <div>
+                {this.state.entries.map((entries) => {
+                  return (
+                    <div>
+                      <li key={entries._id}>
+                        {entries.type}
+                        <img src={entries.image} />
+                        <button value={entries._id} onClick={this.deleteEntry}>Delete</button>
+                        <details>
+                        <summary>Edit</summary>
+                          <form id={entries._id} onSubmit={this.updateEntry}>
+                            <label htmlFor="type">Type</label>
+                            <br />
+                            <input type="text" id="type" onChange={this.handleChanges} />
+                            <label htmlFor="date">Date</label>
+                            <br />
+                            <input type="text" id="date" onChange={this.handleChanges} />
+                            <label htmlFor="image">Image</label>
+                            <br />
+                            <input type="text" id="image" onChange={this.handleChanges} />
+                            <label htmlFor="description">Description</label>
+                            <br />
+                            <input type="text" id="description" onChange={this.handleChanges} />
+                            <br />
+                            <input type="submit" value="Update" />
+                          </form>
+                        </details>
+                      </li>
+                    </div>
+                  )
+                })}
+              </div>
+            </ul>
       </div>
     )
   }
