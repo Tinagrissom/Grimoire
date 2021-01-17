@@ -78,26 +78,31 @@ class App extends React.Component {
           </form>
         <h3>Recent Entries</h3>
           <ul>
-            <div>
+            <div className="row">
                 {this.state.entries.map((entries) => {
                   return (
-                    <div>
+                    <div className="card">
                       <li key={entries._id}>
                         {entries.type}
+                        <br />
                         <img src={entries.image} />
-                        <button value={entries._id} onClick={this.deleteEntry}>Delete</button>
+                        <br />
+                        <p>{entries.description}</p>
                         <details>
                         <summary>Edit</summary>
                           <form id={entries._id} onSubmit={this.updateEntry}>
                             <label htmlFor="type">Type</label>
                             <br />
                             <input type="text" id="type" onChange={this.handleChanges} />
+                            <br />
                             <label htmlFor="date">Date</label>
                             <br />
                             <input type="text" id="date" onChange={this.handleChanges} />
+                            <br />
                             <label htmlFor="image">Image</label>
                             <br />
                             <input type="text" id="image" onChange={this.handleChanges} />
+                            <br />
                             <label htmlFor="description">Description</label>
                             <br />
                             <input type="text" id="description" onChange={this.handleChanges} />
@@ -105,6 +110,7 @@ class App extends React.Component {
                             <input type="submit" value="Update" />
                           </form>
                         </details>
+                        <button value={entries._id} onClick={this.deleteEntry}>Delete</button>
                       </li>
                     </div>
                   )
