@@ -78,7 +78,7 @@ class App extends React.Component {
               <br />
               <br />
           </form>
-        <h2>Recent Entries</h2>
+        <h2 className="recent" >Recent Entries</h2>
           <ul>
             <div className="row">
                 {this.state.entries.map((entries) => {
