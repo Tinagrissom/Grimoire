@@ -86,7 +86,7 @@ class App extends React.Component {
         {this.state.show === true ?
         <div id="modal">
           <div id="modal-text">
-            <h2>About Grimoires, About the Creators</h2>
+            <h2>About Grimoires</h2>
             <p>The term “grimoire” is a bit of a catch-all. There are few really concrete and consistent definitions that go beyond “a book of magic”. Some people say it’s more of a textbook, meant to be passed on to a mentee as a teaching tool. Others say it’s a sort of magical recipe book, used for recording spells for later use. Most of these definitions are far too limited in scope for the reality of modern grimoires.
             <br />
             <br />
@@ -98,11 +98,16 @@ class App extends React.Component {
             <br />
             Astrology-minded witches can use their grimoires to remember all minute complexities of astrology, and those who work with crystals can use theirs as a quick reference guide to crystals, fossils and stones, and all their witchy applications. You can use it to log dreams or thoughts. Or even to write down events like in a journal. Just remember: there is no right or wrong way to make a grimoire.
             </p>
+            <br />
+            <br />
+            <p>
+            Created by: <a href="https://www.linkedin.com/in/britt-leonard/">Brittany Leonard</a> & <a href="https://www.linkedin.com/in/tinagrissom/">Tina Grissom</a>
+            </p>
             <button type="button" id="close" onClick={this.closeModal}>Close</button>
           </div>
         </div>
       : '' }
-        <h3>A collection of dreams, crystals, and, incantations to inspire.</h3>
+        <h3>A collection of dreams, crystals, and incantations to inspire.</h3>
           <form onSubmit ={this.handleSubmit}>
             <h2>Add New Entry</h2>
               <label htmlFor="type">Type of Entry</label>
