@@ -119,8 +119,8 @@ class App extends React.Component {
                     <div className="card">
                       <li key={entries._id}>
                         <h2 id="title">{entries.type}</h2>
-                        <a onClick={this.showEntry}>
-                        <img src={entries.image} />
+                        <a>
+                        <img src={entries.image} onClick={this.showEntry} />
                         </a>
                         <br />
                         <p>{entries.description}</p>
@@ -147,12 +147,27 @@ class App extends React.Component {
                           </form>
                         </details>
                         <button value={entries._id} onClick={this.deleteEntry}>Delete</button>
+                        <button type="button" id="open" onClick={this.showEntry}>Show Entry</button>
                       </li>
+                      {this.state.card === true ?
+                      <div id="show-card">
+                      <ul>
+                        <li key={entries._id}>
+                          <h2 id="title">{entries.type}</h2>
+                          <img src={entries.image} />
+                          <br />
+                          <p>{entries.description}</p>
+                        </li>
+                        </ul>
+                      </div>
+                    : '' }
                     </div>
+
                   )
                 })}
               </div>
             </ul>
+
       </div>
     )
   }
