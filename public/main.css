@@ -10,6 +10,7 @@ body{
 #title{
    font-family: 'Metamorphous', cursive;
    font-size: 30px;
+   margin-bottom: 0;
 }
 form{
   border: 1px solid grey;
@@ -53,6 +54,7 @@ ul{
 button{
   font-family: 'Metamorphous', cursive;
   padding: 5px;
+  margin-bottom: 10px;
 }
 input{
   font-family: 'Metamorphous', cursive;
@@ -70,8 +72,11 @@ input{
 #modal-text, #show-card{
   background-color: white;
   border: 8px solid #D5CEBE;
-  height: 80%;
+  height: auto;
   width: 80%;
   margin: 150px auto;
   padding: 2%;
+}
+h3{
+  line-height: 0px;
 }
