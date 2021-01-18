@@ -60,8 +60,8 @@ class App extends React.Component {
     return (
       <div>
         <h3>A collection of dreams, crystals, and, incantations to inspire.</h3>
-        <h4>Add new Entry</h4>
           <form onSubmit ={this.handleSubmit}>
+            <h2>Add New Entry</h2>
               <label htmlFor="type">Type of Entry</label>
               <input type="text" id="type" onChange={this.handleChanges}/>
               <br />
@@ -75,16 +75,17 @@ class App extends React.Component {
               <input type="text" id="description" onChange={this.handleChanges}/>
               <br />
               <input type="submit" value="Add to Entries"/>
+              <br />
+              <br />
           </form>
-        <h3>Recent Entries</h3>
+        <h2>Recent Entries</h2>
           <ul>
             <div className="row">
                 {this.state.entries.map((entries) => {
                   return (
                     <div className="card">
                       <li key={entries._id}>
-                        {entries.type}
-                        <br />
+                        <h2 id="title">{entries.type}</h2>
                         <img src={entries.image} />
                         <br />
                         <p>{entries.description}</p>

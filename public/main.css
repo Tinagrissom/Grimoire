@@ -1,9 +1,23 @@
 body{
   text-align: center;
+  background-image: url(http://www.southelkhorncc.org/wp-content/uploads/2015/01/Parchment-Paper-Background-2.jpg);
+  font-family: 'Fondamento', cursive;
+}
+.title{
+   font-family: 'Metamorphous', cursive;
+   font-size: 75px;
+}
+#title{
+   font-family: 'Metamorphous', cursive;
+   font-size: 30px;
 }
 form{
   border: 1px solid grey;
   line-height: 30px;
+  background-color: #f6f5f0a6;
+  margin-left: 13%;
+  margin-right: 10%;
+
 }
 .row {
   display: flex;
@@ -22,7 +36,7 @@ img{
   margin: 10px;
   padding: 10px;
   border: 1px solid grey;
-  background-color: #EBDAF2;
+  background-color: #f6f5f0a6;
   text-align: center;
   line-height: 30px;
 }
