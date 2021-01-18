@@ -102,7 +102,7 @@ class App extends React.Component {
           </div>
         </div>
       : '' }
-        <h3>A collection of dreams, crystals, and, incantations to inspire.</h3>
+        <h3>A collection of dreams, crystals, and incantations to inspire.</h3>
           <form onSubmit ={this.handleSubmit}>
             <h2>Add New Entry</h2>
               <label htmlFor="type">Type of Entry</label>
