@@ -129,9 +129,7 @@ class App extends React.Component {
                     <div className="card">
                       <li key={entries._id}>
                         <h2 id="title">{entries.type}</h2>
-                        <a onClick={this.showEntry}>
                         <img src={entries.image} />
-                        </a>
                         <br />
                         <p>{entries.description}</p>
                         <details>
