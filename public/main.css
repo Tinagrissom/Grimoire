@@ -70,7 +70,7 @@ input{
 #modal-text, #show-card{
   background-color: white;
   border: 8px solid #D5CEBE;
-  height: 80%;
+  height: auto;
   width: 80%;
   margin: 150px auto;
   padding: 2%;
