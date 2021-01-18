@@ -5,6 +5,8 @@ class App extends React.Component {
     date: '',
     image: '',
     description: '',
+    show: false,
+    card: false,
     entries: [],
   }
 
@@ -44,6 +46,27 @@ class App extends React.Component {
     })
   }
 
+  showModal = () => {
+    event.preventDefault();
+    this.setState({
+      show: !this.state.show
+    })
+  }
+
+  closeModal = () => {
+    event.preventDefault();
+    this.setState({
+      show: !this.state.show
+    })
+  }
+
+  showEntry = () => {
+    event.preventDefault();
+    this.setState({
+      show: !this.state.card
+    })
+  }
+
   componentDidMount = () => {
     axios.get('/entries').then((response) => {
       this.setState({
@@ -59,6 +82,16 @@ class App extends React.Component {
   render = () => {
     return (
       <div>
+        <button type="button" id="open" onClick={this.showModal}>About</button>
+        {this.state.show === true ?
+        <div id="modal">
+          <div id="modal-text">
+            <h2>About Grimoires, About the Creators</h2>
+            <p>This info here</p>
+            <button type="button" id="close" onClick={this.closeModal}>Close</button>
+          </div>
+        </div>
+      : '' }
         <h3>A collection of dreams, crystals, and, incantations to inspire.</h3>
           <form onSubmit ={this.handleSubmit}>
             <h2>Add New Entry</h2>
@@ -86,7 +119,9 @@ class App extends React.Component {
                     <div className="card">
                       <li key={entries._id}>
                         <h2 id="title">{entries.type}</h2>
+                        <a onClick={this.showEntry}>
                         <img src={entries.image} />
+                        </a>
                         <br />
                         <p>{entries.description}</p>
                         <details>

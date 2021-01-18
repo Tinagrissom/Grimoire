@@ -17,6 +17,8 @@ form{
   background-color: #f6f5f0a6;
   margin-left: 13%;
   margin-right: 10%;
+  font-family: 'Metamorphous', cursive;
+
 
 }
 .row {
@@ -43,4 +45,29 @@ img{
 ul{
   list-style: none;
   margin: 0 auto;
+}
+button{
+  font-family: 'Metamorphous', cursive;
+  padding: 5px;
+}
+input{
+  font-family: 'Metamorphous', cursive;
+}
+#modal, #show-card{
+  background-color: #000000B0;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+#modal-text, #show-card{
+  background-color: white;
+  border: 8px solid #D5CEBE;
+  height: 80%;
+  width: 80%;
+  margin: 150px auto;
+  padding: 2%;
 }
