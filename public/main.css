@@ -6,11 +6,11 @@ body{
 .title{
    font-family: 'Metamorphous', cursive;
    font-size: 75px;
+   margin-bottom: 0px;
 }
 #title{
    font-family: 'Metamorphous', cursive;
    font-size: 30px;
-   margin-bottom: 0;
 }
 form{
   border: 1px solid grey;
@@ -19,8 +19,9 @@ form{
   margin-left: 13%;
   margin-right: 10%;
   font-family: 'Fondamento', cursive;
-
-
+}
+.blurb{
+  font-size: 18px;
 }
 .recent{
    font-family: 'Fondamento', cursive;
@@ -49,6 +50,7 @@ img{
 }
 ul{
   list-style: none;
+  padding: 0;
   margin: 0 auto;
 }
 button{
@@ -76,7 +78,4 @@ input{
   width: 80%;
   margin: 150px auto;
   padding: 2%;
-}
-h3{
-  line-height: 0px;
 }

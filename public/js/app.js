@@ -82,7 +82,7 @@ class App extends React.Component {
   render = () => {
     return (
       <div>
-      <h3>A collection of dreams, crystals, and incantations to inspire.</h3>
+      <p><span className="blurb">A collection of dreams, crystals, and incantations to inspire.</span></p>
         <button type="button" id="open" onClick={this.showModal}>About</button>
         {this.state.show === true ?
         <div id="modal">
@@ -111,15 +111,19 @@ class App extends React.Component {
           <form onSubmit ={this.handleSubmit}>
             <h2>Add New Entry</h2>
               <label htmlFor="type">Type of Entry</label>
+              <br />
               <input type="text" id="type" onChange={this.handleChanges}/>
               <br />
               <label htmlFor="date">Date</label>
+              <br />
               <input type="text" id="date" onChange={this.handleChanges}/>
               <br />
               <label htmlFor="image">Image</label>
+              <br />
               <input type="text" id="image" onChange={this.handleChanges}/>
               <br />
               <label htmlFor="description">Description</label>
+              <br />
               <input type="text" id="description" onChange={this.handleChanges}/>
               <br />
               <input type="submit" value="Add to Entries"/>
