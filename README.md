@@ -5,7 +5,7 @@ A full-stack application using MERN stack: Node.js, Mongoose, Express, and React
 Model created for our Grimoire entries and have full CRUD routes and capabilities.
 
 Delpoyed online with Heroku: https://mygrimoire.herokuapp.com/    
-Developed with GitHub: https://github.com/Tinagrissom/Grimoire/tree/dev
+Developed with GitHub: https://github.com/Tinagrissom/Grimoire/
 
 On load the user will see our app name and small description blurb below. An About button is visible and when clicked will load a modal that displays a more detailed description of Grimoires and the history of Grimoires. At the bottom of the modal the creators are named with links to each creator's LinkedIn page.
 
