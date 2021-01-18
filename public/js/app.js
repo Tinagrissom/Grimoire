@@ -82,6 +82,7 @@ class App extends React.Component {
   render = () => {
     return (
       <div>
+      <h3>A collection of dreams, crystals, and incantations to inspire.</h3>
         <button type="button" id="open" onClick={this.showModal}>About</button>
         {this.state.show === true ?
         <div id="modal">
@@ -107,7 +108,6 @@ class App extends React.Component {
           </div>
         </div>
       : '' }
-        <h3>A collection of dreams, crystals, and incantations to inspire.</h3>
           <form onSubmit ={this.handleSubmit}>
             <h2>Add New Entry</h2>
               <label htmlFor="type">Type of Entry</label>
